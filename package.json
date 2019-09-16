@@ -1,0 +1,15 @@
+{
+  "name": "waterpredictionneuralnet",
+  "version": "1.0.0",
+  "description": "",
+  "main": "my.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "David Smith",
+  "license": "MIT",
+  "dependencies": {
+    "brainjs": "^0.7.4",
+    "mongodb": "^3.3.2"
+  }
+}
