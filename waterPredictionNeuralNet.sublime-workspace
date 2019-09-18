@@ -4,6 +4,18 @@
 		"selected_items":
 		[
 			[
+				"current",
+				"currentTimestampMs"
+			],
+			[
+				"pre",
+				"predictionpassword"
+			],
+			[
+				"prediction",
+				"predictionalgorithm"
+			],
+			[
 				"no",
 				"nowrap\twhite-space"
 			],
@@ -27,7 +39,16 @@
 			"file": "my.js",
 			"settings":
 			{
-				"buffer_size": 449,
+				"buffer_size": 3744,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "package.json",
+			"settings":
+			{
+				"buffer_size": 302,
 				"line_ending": "Unix"
 			}
 		}
@@ -129,15 +150,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 449,
+						"buffer_size": 3744,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								0,
-								0
+								918,
+								918
 							]
 						],
 						"settings":
@@ -145,10 +166,40 @@
 							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 765.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "package.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 302,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								226,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
 					"type": "text"
 				}
 			]

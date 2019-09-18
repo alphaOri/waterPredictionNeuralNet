@@ -10,6 +10,7 @@
   "license": "MIT",
   "dependencies": {
     "brainjs": "^0.7.4",
-    "mongodb": "^3.3.2"
+    "mongodb": "^3.3.2",
+    "saslprep": "^1.0.3"
   }
 }
