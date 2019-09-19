@@ -52,17 +52,19 @@ function getData() {
 	    	else {
 	    		if(doc){
 	    			console.log("Got doc created: "+doc.created)
-	    			console.log("Flow length: "+doc.flow.length)
+	    			//console.log("Flow length: "+doc.flow.length)
 	    			handleDailyDoc(doc)
 	    			getData()
 	    			console.log("Done")
 	    		}else {
-	    			console.log("End of docs")
+	    			console.log("Saving to File")
 	    			trainingData.forEach(function(v) {
 	    				var objectStr = JSON.stringify(v)
 	    				file.write(objectStr+', '+ '\n'); 
 	    			});
 	    			file.end();
+	    			console.log("Training Brain")
+	    			trainBrain()
 	    		}
 	    	}
 	    }
@@ -108,11 +110,28 @@ function addToTrainingData(gallonsSoFar, timestamp, gallons) {
 
 function clicksToGallons(clicks) {return (0.000925824*clicks + 0.0015719)}
 
-var net = new brain.NeuralNetwork();
- 
-net.train([{input: { r: 0.03, g: 0.7, b: 0.5 }, output: { black: 1 }},
-           {input: { r: 0.16, g: 0.09, b: 0.2 }, output: { white: 1 }},
-           {input: { r: 0.5, g: 0.5, b: 1.0 }, output: { white: 1 }}]);
- 
-var output = net.run({ r: 1, g: 0.4, b: 0 });  // { white: 0.99, black: 0.002 }
-console.log(output)
+function trainBrain() {
+	var net = new brain.NeuralNetwork({hiddenLayers: 5});
+
+	net.train(trainingData, { 
+		  //log: (stats) => console.log(stats), 
+		  // Defaults values --> expected validation
+	      iterations: 20000,    // the maximum times to iterate the training data --> number greater than 0
+	      errorThresh: 0.05,   // the acceptable error percentage from training data --> number between 0 and 1
+	      log: true,           // true to use console.log, when a function is supplied it is used --> Either true or a function
+	      logPeriod: 1,        // iterations between logging out --> number greater than 0
+	      learningRate: 0.03,    // scales with delta to effect training rate --> number between 0 and 1
+	      momentum: 0.1,        // scales with next layer's change value --> number between 0 and 1
+	      callback: null,       // a periodic call back that can be triggered while training --> null or function
+	      callbackPeriod: 10,   // the number of iterations through the training data between callback calls --> number greater than 0
+	      timeout: Infinity     // the max number of milliseconds to train for --> number greater than 0
+
+	});
+
+	console.log(net.run({ input: { gallonsSoFar: 0, timestamp: 0.000001 }}));
+	console.log(net.run({ input: { gallonsSoFar: 0.005422257596000007, timestamp: 0.30393769675925925 }})); //output: 0.22322169950398996
+	console.log(net.run({ input: { gallonsSoFar: 0.004017469735999997, timestamp: 0.11428484953703703 }})); // output: 0.14486435972399841
+	//console.log(net.run({ input: { gallonsSoFar: 0, timestamp: 0.000001 }}));
+	//console.log(net.run({ input: { gallonsSoFar: 0, timestamp: 0.000001 }}));
+	//console.log(net.run({ input: { gallonsSoFar: 0, timestamp: 0.000001 }}));
+}
