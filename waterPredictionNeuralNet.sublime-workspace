@@ -4,6 +4,34 @@
 		"selected_items":
 		[
 			[
+				"num",
+				"numavg"
+			],
+			[
+				"gallons",
+				"gallonsSoFar"
+			],
+			[
+				"l",
+				"length"
+			],
+			[
+				"train",
+				"trainingDocs"
+			],
+			[
+				"curre",
+				"currentIndex"
+			],
+			[
+				"trainin",
+				"trainingDocsIndex"
+			],
+			[
+				"trainigDocs",
+				"trainingDocsIndex"
+			],
+			[
 				"current",
 				"currentTimestampMs"
 			],
@@ -39,7 +67,16 @@
 			"file": "my.js",
 			"settings":
 			{
-				"buffer_size": 3744,
+				"buffer_size": 7917,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "averages.js",
+			"settings":
+			{
+				"buffer_size": 4602,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -48,7 +85,7 @@
 			"file": "package.json",
 			"settings":
 			{
-				"buffer_size": 302,
+				"buffer_size": 328,
 				"line_ending": "Unix"
 			}
 		}
@@ -89,13 +126,13 @@
 	},
 	"file_history":
 	[
+		"/home/david/.node-red/context/960d5a8b.8e7398/flow.json",
 		"/home/david/Documents/waterPredictionNeuralNet/my.js",
 		"/home/david/Documents/my.js",
 		"/home/david/.node-red/uibuilder/react_ui/src/react_app/src/index.css",
 		"/home/david/Documents/MonitoringDashboardMockup/index.css",
 		"/home/david/Documents/mongodb2.js",
 		"/home/david/.node-red/node_modules/node-red-node-mongodb/66-mongodb.js",
-		"/home/david/.node-red/context/960d5a8b.8e7398/flow.json",
 		"/home/david/.node-red/uibuilder/react_ui/src/react_app/public/index.js",
 		"/home/david/Documents/MonitoringDashboardMockup/roboto-font.css",
 		"/home/david/Documents/MonitoringDashboardMockup/index.html",
@@ -141,7 +178,7 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
@@ -150,35 +187,65 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 3744,
+						"buffer_size": 7917,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								918,
-								918
+								5345,
+								5345
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 765.0,
+						"translation.y": 2093.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "averages.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4602,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3840,
+								3840
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1530.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 2,
 					"file": "package.json",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 302,
+						"buffer_size": 328,
 						"regions":
 						{
 						},
